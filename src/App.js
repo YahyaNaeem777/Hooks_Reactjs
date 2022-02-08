@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
+import ChangeTime from "./ChangeTime";
 
 function App() {
-  const date = new Date();
   // const state = useState();
   const [count, stateposition] = useState(0);
   let incNum = () => {
@@ -26,6 +26,8 @@ function App() {
         <button onClick={incNum}>Increment</button>
         <button onClick={decNum}>decrement</button>
       </div>
+
+      <ChangeTime />
     </div>
   );
 }
