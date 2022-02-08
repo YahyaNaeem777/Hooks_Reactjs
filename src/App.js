@@ -1,32 +1,17 @@
 import logo from './logo.svg';
-import './App.css';
-import { useState } from "react";
+import "./App.css";
 import ChangeTime from "./ChangeTime";
+import Inc_Dec_numbers from "./Inc_Dec_number";
+import DigitalClock from "./DigitalClock";
 
 function App() {
   // const state = useState();
-  const [count, stateposition] = useState(0);
-  let incNum = () => {
-    stateposition(count + 1);
-  };
 
-  let decNum = () => {
-    stateposition(count - 1);
-  };
-
-  if (count < 0) {
-    alert("not decrease by 0");
-  }
   // stateposition();
   return (
     <div>
-      <div>
-        <h1>{count}</h1>
-        <br />
-        <button onClick={incNum}>Increment</button>
-        <button onClick={decNum}>decrement</button>
-      </div>
-
+      <DigitalClock />
+      <Inc_Dec_numbers />
       <ChangeTime />
     </div>
   );
